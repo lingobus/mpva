@@ -18,5 +18,8 @@
     "access": "public"
   },
   "license": "ISC",
-  "homepage": "https://github.com/lingobus/mpva/tree/master/packages/@mpva/cli-plugin-express#readme"
+  "homepage": "https://github.com/lingobus/mpva/tree/master/packages/@mpva/cli-plugin-express#readme",
+  "dependencies": {
+    "@mpva/shared-utils": "^1.0.0"
+  }
 }

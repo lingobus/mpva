@@ -35,15 +35,17 @@ module.exports = (api, opts, rootOptions, invoking) => {
     })
   }
 
+  const viewDirName = 'views'
   api.onCreateComplete(() => {
     const ignoreFilePath = api.resolve('.gitignore')
     const fs = require('fs')
     if (!fs.existsSync(ignoreFilePath)) return
     const content = fs.readFileSync(ignoreFilePath).toString('utf-8')
     const trimedLines = content.split("\n").map(line => line.trim())
-    const viewDirName = 'views'
     const hasViewDirAdded = trimedLines.indexOf(viewDirName) >= 0 || trimedLines.indexOf('./' + viewDirName) >= 0
     if (hasViewDirAdded) return
-    fs.writeFileSync(ignoreFilePath, content + "\n#express view directory\n" + viewDirName)
+    fs.writeFileSync(ignoreFilePath, content + "\nproxy-table.dev.example.js\nproxy-table.dev.js\n#express view directory\n" + viewDirName)
   })
+
+  api.exitLog('Run `node app.js` and open http://localhost:' + opts.devPort, 'done')
 }
