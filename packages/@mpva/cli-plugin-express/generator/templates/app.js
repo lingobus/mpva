@@ -19,7 +19,7 @@ console.log(('Static Directory set to:\n  '.magenta.bold + staticPath).green)
 
 var app = express()
 app.set('views', config.paths.views)
-app.set('view engine', 'jade')
+app.set('view engine', 'pug')
 
 if (env === 'dev') {
   console.log('Using Development Env Config'.cyan.inverse)

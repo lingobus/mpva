@@ -4,7 +4,10 @@ const $path = require('path')
 var router = require('express').Router()
 
 router.get('/', function (req, res) {
-  res.render('index')
+  //change following line to render your index page
+  res.type('text/html')
+  res.status(200)
+  res.send('<h1>Hello!</h1><p>you may want to edit controllers/index.js</p>')
 })
 
 glob.glob($path.join(__dirname, './*.controller.js'), function (err, files) {
