@@ -1,6 +1,6 @@
 {
   "name": "@mpva/vue-cli-plugin-express",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "author": "wangweihua <aztack@163.com>",
   "main": "index.js",
