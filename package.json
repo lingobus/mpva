@@ -1,0 +1,12 @@
+{
+  "name": "mpva",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "packages/@mpva/*"
+  ],
+  "devDependencies": {
+    "lerna": "^3.4.3",
+    "babel-core": "7.0.0-bridge.0"
+  }
+}
