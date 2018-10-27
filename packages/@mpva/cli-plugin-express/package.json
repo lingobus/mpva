@@ -13,11 +13,7 @@
     "cli",
     "express"
   ],
-  "scripts": {
-  },
-  "publishConfig": {
-    "access": "public"
-  },
+  "scripts": {},
   "publishConfig": {
     "access": "public"
   },
